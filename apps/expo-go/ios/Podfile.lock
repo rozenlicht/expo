@@ -421,7 +421,7 @@ PODS:
   - libwebp/sharpyuv (1.3.2)
   - libwebp/webp (1.3.2):
     - libwebp/sharpyuv
-  - lottie-ios (4.4.1)
+  - lottie-ios (4.4.3)
   - lottie-react-native (6.7.0):
     - DoubleConversion
     - glog
@@ -490,7 +490,6 @@ PODS:
     - React-RCTText (= 0.75.2)
     - React-RCTVibration (= 0.75.2)
   - React-callinvoker (0.75.2)
-  - React-Codegen (0.1.0)
   - React-Core (0.75.2):
     - glog
     - hermes-engine
@@ -1690,8 +1689,6 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-maps (1.14.0):
-    - React-Core
   - react-native-netinfo (11.3.1):
     - React-Core
   - react-native-pager-view (6.4.0):
@@ -1871,14 +1868,13 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-webview (13.8.6):
+  - react-native-webview (13.12.2):
     - DoubleConversion
     - glog
     - hermes-engine
     - RCT-Folly (= 2024.01.01.00)
     - RCTRequired
     - RCTTypeSafety
-    - React-Codegen
     - React-Core
     - React-debug
     - React-Fabric
@@ -1889,6 +1885,7 @@ PODS:
     - React-RCTFabric
     - React-rendererdebug
     - React-utils
+    - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
@@ -2153,7 +2150,26 @@ PODS:
     - React-perflogger (= 0.75.2)
     - React-utils (= 0.75.2)
   - RNCAsyncStorage (1.23.1):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
     - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNCMaskedView (0.3.1):
     - React-Core
   - RNCPicker (2.7.5):
@@ -2547,14 +2563,13 @@ DEPENDENCIES:
   - React-logger (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon/react/nativemodule/microtasks`)
-  - react-native-maps (from `../../../node_modules/react-native-maps`)
   - "react-native-netinfo (from `../../../node_modules/@react-native-community/netinfo`)"
   - react-native-pager-view (from `../../../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../../../node_modules/react-native-safe-area-context`)
   - "react-native-segmented-control (from `../../../node_modules/@react-native-segmented-control/segmented-control`)"
   - "react-native-skia (from `../../../node_modules/@shopify/react-native-skia`)"
   - "react-native-slider (from `../../../node_modules/@react-native-community/slider`)"
-  - react-native-webview (from `./vendored/unversioned/react-native-webview`)
+  - react-native-webview (from `../../../node_modules/react-native-webview`)
   - React-nativeconfig (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon/reactperflogger`)
@@ -2581,7 +2596,7 @@ DEPENDENCIES:
   - React-utils (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../../../react-native-lab/react-native/packages/react-native/ReactCommon`)
-  - "RNCAsyncStorage (from `./vendored/unversioned/@react-native-async-storage/async-storage`)"
+  - "RNCAsyncStorage (from `../../../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCMaskedView (from `../../../node_modules/@react-native-masked-view/masked-view`)"
   - "RNCPicker (from `../../../node_modules/@react-native-picker/picker`)"
   - "RNDateTimePicker (from `../../../node_modules/@react-native-community/datetimepicker`)"
@@ -2614,7 +2629,6 @@ SPEC REPOS:
     - PromisesObjC
     - Quick
     - ReachabilitySwift
-    - React-Codegen
     - SDWebImage
     - SDWebImageAVIFCoder
     - SDWebImageSVGCoder
@@ -2842,8 +2856,6 @@ EXTERNAL SOURCES:
     :path: "../../../react-native-lab/react-native/packages/react-native/ReactCommon"
   React-microtasksnativemodule:
     :path: "../../../react-native-lab/react-native/packages/react-native/ReactCommon/react/nativemodule/microtasks"
-  react-native-maps:
-    :path: "../../../node_modules/react-native-maps"
   react-native-netinfo:
     :path: "../../../node_modules/@react-native-community/netinfo"
   react-native-pager-view:
@@ -2857,7 +2869,7 @@ EXTERNAL SOURCES:
   react-native-slider:
     :path: "../../../node_modules/@react-native-community/slider"
   react-native-webview:
-    :path: "./vendored/unversioned/react-native-webview"
+    :path: "../../../node_modules/react-native-webview"
   React-nativeconfig:
     :path: "../../../react-native-lab/react-native/packages/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -2911,7 +2923,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../../../react-native-lab/react-native/packages/react-native/ReactCommon"
   RNCAsyncStorage:
-    :path: "./vendored/unversioned/@react-native-async-storage/async-storage"
+    :path: "../../../node_modules/@react-native-async-storage/async-storage"
   RNCMaskedView:
     :path: "../../../node_modules/@react-native-masked-view/masked-view"
   RNCPicker:
@@ -3020,12 +3032,12 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 54dee9d48d14580407f8f5fbf2f496e92437a2f2
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
-  hermes-engine: f18c6a3958352b6f725d0940dd4546d5ef2b66e7
+  hermes-engine: 04da8bf9f2f1bdb316fac0283df0fe77046f3d9b
   JKBigInteger: 5c72131974815e969c0782c41e3452f1bbe5619f
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
-  lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
+  lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
   lottie-react-native: 81fc4aa5ac5f47ad84ae601226cdcb4d7c581429
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
@@ -3039,7 +3051,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   React: 643f06bc294806d2db2526b424fdf759e107f514
   React-callinvoker: 34d1fa0c340104f324e2521f546196beb44dfad2
-  React-Codegen: 4b8b4817cea7a54b83851d4c1f91f79aa73de30a
   React-Core: eb459d9cf198ed7811f2c118cb70f7690830acb4
   React-CoreModules: f92a2cb11d22f6066823ca547c61e900325dfe44
   React-cxxreact: f5595a4cbfe5a4e9d401dffa2c1c78bbbbbe75e4
@@ -3064,14 +3075,13 @@ SPEC CHECKSUMS:
   React-logger: 8db32983d75dc2ad54f278f344ccb9b256e694fc
   React-Mapbuffer: 1c08607305558666fd16678b85ef135e455d5c96
   React-microtasksnativemodule: f13f03163b6a5ec66665dfe80a0df4468bb766a6
-  react-native-maps: cbf2f03bfeebfd7ec45966b066db13a075fd2af3
   react-native-netinfo: bdb108d340cdb41875c9ced535977cac6d2ff321
   react-native-pager-view: 7985124bceda6e09dd9ca6811d5cebf5127e93cf
   react-native-safe-area-context: 38fdd9b3c5561de7cabae64bd0cd2ce05d2768a1
   react-native-segmented-control: b92809e9111013dfa266e1168ba366d62898d9a4
   react-native-skia: 25a27c32c1347314602b16c459fc432aa1384708
   react-native-slider: e1f4b4538f7de7417b626174874f4f58d4cf6c28
-  react-native-webview: 05bae3a03a1e4f59568dfc05286c0ebf8954106c
+  react-native-webview: 06f91954784dde28e1210f381c791f0c5f9bd9a2
   React-nativeconfig: 57781b79e11d5af7573e6f77cbf1143b71802a6d
   React-NativeModulesApple: 7ff2e2cfb2e5fa5bdedcecf28ce37e696c6ef1e1
   React-perflogger: 8a360ccf603de6ddbe9ff8f54383146d26e6c936
@@ -3098,7 +3108,7 @@ SPEC CHECKSUMS:
   React-utils: 81a715d9c0a2a49047e77a86f3a2247408540deb
   ReactCodegen: 4a764a7c0d04f0f9a4d426b0ae85c00c2e17a909
   ReactCommon: 6ef348087d250257c44c0204461c03f036650e9b
-  RNCAsyncStorage: 826b603ae9c0f88b5ac4e956801f755109fa4d5c
+  RNCAsyncStorage: a927b768986f83467b635cf6d7559e6edb46db7a
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNCPicker: 7973f617de8809ab9e7577b93ce23d3449fb1ec7
   RNDateTimePicker: 00f430c6e77e6d9723954a5b5a820644d4b488a2
