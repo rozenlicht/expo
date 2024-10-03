@@ -15,3 +15,5 @@ export {
   DRMType,
   DRMOptions,
 } from './VideoPlayer.types';
+
+export { default as VideoThumbnail } from './VideoThumbnail';

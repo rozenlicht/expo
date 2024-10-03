@@ -386,7 +386,7 @@ public final class ImageView: ExpoView {
     }
 
     if !isPlaceholder {
-      onDisplay()
+//      onDisplay()
     }
 
 #if !os(tvOS)

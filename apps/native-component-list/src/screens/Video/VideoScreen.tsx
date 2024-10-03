@@ -1,8 +1,10 @@
 import Slider from '@react-native-community/slider';
 import { Picker } from '@react-native-picker/picker';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import { Image } from 'expo-image';
 import { Platform } from 'expo-modules-core';
 import { useVideoPlayer, VideoView, VideoSource, VideoPlayerEvents } from 'expo-video';
+import { VideoThumbnail } from 'expo-video/build/VideoThumbnail';
 import React, { useCallback, useEffect, useRef } from 'react';
 import { PixelRatio, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -73,6 +75,7 @@ export default function VideoScreen() {
   const [currentSource, setCurrentSource] = React.useState(videoSources[0]);
   const [logEvents, setLogEvents] = React.useState(false);
   const [showNowPlayingNotification, setShowNowPlayingNotification] = React.useState(true);
+  const [thumbnails, setThumbnails] = React.useState<VideoThumbnail[]>([]);
 
   const player = useVideoPlayer(currentSource, (player) => {
     player.volume = volume;
@@ -149,6 +152,15 @@ export default function VideoScreen() {
     [player]
   );
 
+  const generateThumbnails = useCallback(async () => {
+    const start = performance.now();
+    const thumbnails = await player.generateThumbnailsAsync([4.3, 18.4, 46.6, 136, 460]);
+    const end = performance.now();
+    console.log(end - start);
+    console.log(JSON.stringify(thumbnails, null, 2));
+    setThumbnails(thumbnails);
+  }, [player]);
+
   useEffect(() => {
     if (logEvents) {
       eventsToListen.forEach((eventName) => {
@@ -222,6 +234,16 @@ export default function VideoScreen() {
           title="Toggle picture in picture"
           onPress={togglePictureInPicture}
         />
+        <Button style={styles.button} title="Generate thumbnails" onPress={generateThumbnails} />
+        {thumbnails.map((thumbnail, index) => {
+          return (
+            <Image
+              key={index}
+              source={thumbnail}
+              style={{ marginTop: 10, width: 160, height: 90, backgroundColor: 'green' }}
+            />
+          );
+        })}
         <Text>Playback Volume: </Text>
         <Slider
           style={{ alignSelf: 'stretch' }}
